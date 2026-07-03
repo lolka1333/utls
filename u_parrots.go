@@ -1045,6 +1045,13 @@ func utlsIdToSpec(id ClientHelloID) (ClientHelloSpec, error) {
 				&UtlsGREASEExtension{},
 			}),
 		}, nil
+	case HelloChrome_150_PSK:
+		spec, err := utlsIdToSpec(HelloChrome_150)
+		if err != nil {
+			return ClientHelloSpec{}, err
+		}
+		spec.Extensions = append(spec.Extensions, &UtlsPreSharedKeyExtension{})
+		return spec, nil
 	case HelloFirefox_55, HelloFirefox_56:
 		return ClientHelloSpec{
 			TLSVersMax: VersionTLS12,
