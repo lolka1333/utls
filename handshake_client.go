@@ -23,10 +23,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/refraction-networking/utls/internal/byteorder"
-	"github.com/refraction-networking/utls/internal/fips140tls"
-	"github.com/refraction-networking/utls/internal/hpke"
-	"github.com/refraction-networking/utls/internal/tls13"
+	"github.com/lolka1333/utls/internal/byteorder"
+	"github.com/lolka1333/utls/internal/fips140tls"
+	"github.com/lolka1333/utls/internal/hpke"
+	"github.com/lolka1333/utls/internal/tls13"
 )
 
 type clientHandshakeState struct {

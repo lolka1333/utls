@@ -5,8 +5,8 @@ import (
 	"io"
 	"testing"
 
-	tls "github.com/refraction-networking/utls"
-	"github.com/refraction-networking/utls/dicttls"
+	tls "github.com/lolka1333/utls"
+	"github.com/lolka1333/utls/dicttls"
 )
 
 func TestGREASEECHWrite(t *testing.T) {

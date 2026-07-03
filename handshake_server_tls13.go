@@ -18,11 +18,11 @@ import (
 	"sort"
 	"time"
 
-	"github.com/refraction-networking/utls/internal/byteorder"
-	"github.com/refraction-networking/utls/internal/fips140tls"
-	"github.com/refraction-networking/utls/internal/hkdf"
-	"github.com/refraction-networking/utls/internal/hpke"
-	"github.com/refraction-networking/utls/internal/tls13"
+	"github.com/lolka1333/utls/internal/byteorder"
+	"github.com/lolka1333/utls/internal/fips140tls"
+	"github.com/lolka1333/utls/internal/hkdf"
+	"github.com/lolka1333/utls/internal/hpke"
+	"github.com/lolka1333/utls/internal/tls13"
 )
 
 // maxClientPSKIdentities is the number of client PSK identities the server will
