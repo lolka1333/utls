@@ -1019,11 +1019,9 @@ func utlsIdToSpec(id ClientHelloID) (ClientHelloSpec, error) {
 					PKCS1WithSHA512,
 				}},
 				&SCTExtension{},
-				// trust_anchors (0xca34), sent by Chrome 150 with a single GREASE
-				// trust anchor id.
-				&GenericExtension{Id: 0xca34, Data: []byte{
-					0x00, 0x08, 0x07, 0x82, 0xda, 0x4b, 0x30, 0x07, 0xb0, 0x7f,
-				}},
+				// trust_anchors (0xca34). Chrome 150.0.7871.46 sends it as an
+				// empty list (verified against two live tls.peet.ws captures).
+				&GenericExtension{Id: 0xca34, Data: []byte{0x00, 0x00}},
 				&KeyShareExtension{[]KeyShare{
 					{Group: CurveID(GREASE_PLACEHOLDER), Data: []byte{0}},
 					{Group: X25519MLKEM768},
